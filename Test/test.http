@@ -6,5 +6,34 @@ POST http://localhost:4004/odata/v4/school/Students
 Content-Type : application/json
 
 {
-        "student_id":"2005"
+        "student_id":"1005"
+}
+
+###
+GET http://localhost:4004/odata/v4/school/CompleteStudentInfo(student_id='1003')
+
+###
+POST http://localhost:4004/odata/v4/school/Teachers
+Content-Type: application/json
+
+{
+        "teacher_id":"1001"
+}
+
+
+###
+PATCH http://localhost:4004/odata/v4/school/Teachers/1001
+Content-Type: application/json
+
+{
+        "teacher_name":"Ravi"
+}
+
+
+###
+POST http://localhost:4004/odata/v4/school/kids
+Content-Type: application/json
+
+{
+        "kid_name":"Pavithra"
 }
