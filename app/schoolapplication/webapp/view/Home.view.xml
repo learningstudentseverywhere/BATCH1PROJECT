@@ -1,0 +1,19 @@
+<mvc:View controllerName="com.schoolapp.schoolapplication.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+           
+        <HBox >
+        <Label id="studentLabel" text="Enter Student Id :" class="sapUiMediumMarginBegin sapUiTinyMarginEnd sapUiMediumMarginTop"></Label>
+        <Input id="studentInput" class="sapUiTinyMarginBegin sapUiMediumMarginEnd sapUiMediumMarginTop" value="{studentModel>/studentInput}"/>
+       </HBox>
+       <Button id="buttonForStudent" text="Get the Student Details" press="getStudentData" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
+
+       <HBox >
+        <Label id="studentLabelOutput" text="Student Fees Details:" class="sapUiMediumMarginBegin sapUiTinyMarginEnd sapUiMediumMarginTop"></Label>
+        <Input id="studentOutput" class="sapUiTinyMarginBegin sapUiMediumMarginEnd sapUiMediumMarginTop" editable="false" value="{studentModel>/studentOutput}"/>
+       </HBox>
+        </content>
+    </Page>
+</mvc:View>
