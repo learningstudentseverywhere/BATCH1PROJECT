@@ -115,6 +115,13 @@
           "target": [
             "TargetHome"
           ]
+        },
+        {
+          "name": "RouteStudentInfoDisplay",
+          "pattern": "studentInfo",
+          "target": [
+            "TargetStudentDisplay"
+          ]
         }
       ],
       "targets": {
@@ -124,6 +131,13 @@
           "clearControlAggregation": false,
           "viewId": "Home",
           "viewName": "Home"
+        },
+        "TargetStudentDisplay": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CompleteStudentInformation",
+          "viewName": "CompleteStudentInformation"
         }
       }
     },

@@ -34,7 +34,10 @@ sap.ui.define([
 
                 var studentData={
                     "studentInput":"",
-                    "studentOutput":""
+                    "studentOutput":"",
+                    "StudentData":[],
+                    "StudentInputSecondPage":"",
+                    "StudentInputFeesSecondPage":""
                 }
                
                 this.setModel(new JSONModel(studentData),"studentModel");

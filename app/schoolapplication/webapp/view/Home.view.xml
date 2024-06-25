@@ -14,6 +14,8 @@
         <Label id="studentLabelOutput" text="Student Fees Details:" class="sapUiMediumMarginBegin sapUiTinyMarginEnd sapUiMediumMarginTop"></Label>
         <Input id="studentOutput" class="sapUiTinyMarginBegin sapUiMediumMarginEnd sapUiMediumMarginTop" editable="false" value="{studentModel>/studentOutput}"/>
        </HBox>
+
+       <Button id="navigeteToStudentInformationPage"  text="Go to Student Page" press="onNavigateToStudentPage" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
         </content>
     </Page>
 </mvc:View>
