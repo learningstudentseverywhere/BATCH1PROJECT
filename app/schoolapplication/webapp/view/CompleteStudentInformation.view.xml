@@ -76,13 +76,28 @@
                         text="Create Student"
                         key="notes"
                     >
-                        <Text text="Notes go here ..." />
+                            <HBox >
+        <Label id="studentLabelSecondPageCreate" text="Enter Student Id :" class="sapUiMediumMarginBegin sapUiTinyMarginEnd sapUiMediumMarginTop"></Label>
+        <Input id="studentInputSecondPageCreate" class="sapUiTinyMarginBegin sapUiMediumMarginEnd sapUiMediumMarginTop" value="{studentModel>/StudentInputCreate}"/>
+       </HBox>
+       
+
+       <HBox >
+        <Label id="studentLabelOutputSecondPageCreate" text="Enter Student Fees Details:" class="sapUiMediumMarginBegin sapUiTinyMarginEnd sapUiMediumMarginTop"></Label>
+        <Input id="studentOutputSecondPageCreate" class="sapUiTinyMarginBegin sapUiMediumMarginEnd sapUiMediumMarginTop"  value="{studentModel>/StudentFeesInputCreate}"/>
+       </HBox>
+
+        <Button id="buttonForStudentFeesCreate" text="Create Student" press="createStudentData" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
                     </IconTabFilter>
                     <IconTabFilter
-                        text="People"
+                        text="Delete"
                         key="people"
                     >
-                        <Text text="People content goes here ..." />
+                       <HBox >
+        <Label id="studentLabelOutputSecondPageDelete" text="Enter Student Id" class="sapUiMediumMarginBegin sapUiTinyMarginEnd sapUiMediumMarginTop"></Label>
+        <Input id="studentOutputSecondPageDelete" class="sapUiTinyMarginBegin sapUiMediumMarginEnd sapUiMediumMarginTop"  value="{studentModel>/StudentInputForDelete}"/>
+       </HBox>
+        <Button id="buttonForStudentFeesDelete" text="Delete Student" press="deleteStudentData" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
                     </IconTabFilter>
                 </items>
             </IconTabBar>

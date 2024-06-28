@@ -49,6 +49,94 @@ function (Controller) {
                 }
 
             });
+        },
+        createStudentData :async function(){
+           
+            let oModel = this.getView().getModel("studentModel");
+            let inputStudentId = oModel.getProperty("/StudentInputCreate");
+            let inputStudentFees = oModel.getProperty("/StudentFeesInputCreate");
+
+            //Create Student Fees Data
+            let studentFeesUrl = "/odata/v4/school/StudentFees"
+            let postValuesOfFees = {
+                "student_id":inputStudentId,
+                "fees_paid":inputStudentFees
+            }
+            
+            try{
+            let studentFeesCallStatus = await this.apiCall(studentFeesUrl,postValuesOfFees)
+            console.log(studentFeesCallStatus);
+            }
+            catch(error){
+                console.log(error);
+            }
+           
+
+            //Creating Student Data
+            let studentUrl = "/odata/v4/school/Students"
+            let postValues = {
+                "student_id":inputStudentId
+            }
+
+            $.ajax({
+                url:studentUrl,
+                contentType:"application/json",
+                type:"POST",
+                data:JSON.stringify(postValues),
+                dataType:"json",
+                success:function(oResult){
+                    console.log("Created Successfully");
+                },
+                error:function(oError){
+                    console.log("Error While creating Student");
+                }
+            });
+
+
+        },
+        deleteStudentData :function(){
+            let oModel = this.getView().getModel('studentModel')
+            let studentid = oModel.getProperty("/StudentInputForDelete");
+
+            //Delete
+            let url = "/odata/v4/school/Students"
+            let deleteUrl = "(student_id='"+studentid+"')"
+
+            $.ajax({
+                url:url+deleteUrl,
+                contentType:"application/json",
+                type:"DELETE",
+                dataType:"json",
+                success:function(oResult){
+                console.log(oResult);
+                },
+                error:function(oError){
+                  console.log(oError);
+                }
+            });
+
+        },
+        apiCall:function(studentFeesUrl,postValuesOfFees){
+
+        return new Promise((resolve,reject)=>{
+            $.ajax({
+                url:studentFeesUrl,
+                contentType:"application/json",
+                type:"POST",
+                data:JSON.stringify(postValuesOfFees),
+                dataType:"json",
+                success:function(oResult){
+                    console.log("Created Fees DataSuccessfully");
+                    resolve("Succesfully Created Fees table");
+                },
+                error:function(oError){
+                    console.log("Error While creating Student Fees Data");
+                    reject("Error Occured while creating")
+                }
+            });
+
+        });
+
         }
     });
 });

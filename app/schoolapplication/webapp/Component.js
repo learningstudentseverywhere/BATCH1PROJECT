@@ -37,7 +37,10 @@ sap.ui.define([
                     "studentOutput":"",
                     "StudentData":[],
                     "StudentInputSecondPage":"",
-                    "StudentInputFeesSecondPage":""
+                    "StudentInputFeesSecondPage":"",
+                    "StudentInputCreate":"",
+                    "StudentFeesInputCreate":"",
+                    "StudentInputForDelete":""
                 }
                
                 this.setModel(new JSONModel(studentData),"studentModel");
