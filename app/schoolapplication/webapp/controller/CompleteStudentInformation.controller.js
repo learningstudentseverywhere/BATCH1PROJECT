@@ -107,6 +107,7 @@ sap.ui.define([
             apiCall: function (studentFeesUrl, postValuesOfFees) {
 
                 return new Promise((resolve, reject) => {
+                    
                     $.ajax({
                         url: studentFeesUrl,
                         contentType: "application/json",

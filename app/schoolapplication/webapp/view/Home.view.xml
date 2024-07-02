@@ -15,7 +15,9 @@
         <Input id="studentOutput" class="sapUiTinyMarginBegin sapUiMediumMarginEnd sapUiMediumMarginTop" editable="false" value="{studentModel>/studentOutput}"/>
        </HBox>
 
-       <Button id="navigeteToStudentInformationPage"  text="Go to Student Page" press="onNavigateToStudentPage" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
+       <Button id="navigeteToStudentInformationPage"  text="Go to Student Page with Normal Controls" press="onNavigateToStudentPage" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
+
+            <Button id="navigeteToStudentInformationPageSmartControls"  text="Go to Student Page with Smart Controls" press="onNavigateToStudentPageSmartControls" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
         </content>
     </Page>
 </mvc:View>
