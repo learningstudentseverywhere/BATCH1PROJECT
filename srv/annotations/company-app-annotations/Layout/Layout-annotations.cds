@@ -24,5 +24,77 @@ annotate my.Companies with @UI:{
      $Type : 'UI.HeaderInfoType',
      TypeName : 'Company Data',
      TypeNamePlural : 'Companies Data',
+     Title:{
+        $Type:'UI.DataField',
+        Value : company_id
+     }
+ },
+ HeaderFacets  : [
+     {
+        $Type:'UI.ReferenceFacet',
+        ID:'CompanyDetails',
+        Label : 'Company Basic Details',
+        Target : '@UI.FieldGroup#CompanyBasicDetails'
+     },
+      {
+        $Type:'UI.ReferenceFacet',
+        ID:'CompanyIdDetails',
+        Label : 'Company ID',
+        Target : '@UI.FieldGroup#CompanyIDDetails'
+     }
+ ],
+ FieldGroup#CompanyBasicDetails : {
+     $Type : 'UI.FieldGroupType',
+     Data : [
+        {
+            $Type:'UI.DataField',
+            Value:company_id
+        },
+        {
+            $Type:'UI.DataField',
+            Value : company_name
+        }
+     ]
+ },
+ FieldGroup#CompanyIDDetails:{
+    $Type:'UI.FieldGroupType',
+    Data:[
+        {
+            $Type:'UI.DataField',
+            Value:company_id
+        }
+    ]
+ },
+ Facets:[
+    {
+        $Type:'UI.ReferenceFacet',
+        ID:'CompanyDetailsSection',
+        Label : 'Company Section Info',
+        Target:'@UI.FieldGroup#CompanyBasicDetailsSection'
+    },
+     {
+        $Type:'UI.ReferenceFacet',
+        ID:'CompanyName',
+        Label : 'Company Name Info',
+        Target:'@UI.FieldGroup#CompanyNameDetailsSection'
+    }
+ ],
+ FieldGroup#CompanyBasicDetailsSection :{
+    $Type :'UI.FieldGroupType',
+    Data : [
+        {
+            $Type:'UI.DataField',
+            Value : company_name
+        }
+    ]
+ },
+ FieldGroup#CompanyNameDetailsSection :{
+   $Type :'UI.FieldGroupType',
+    Data : [
+        {
+            $Type:'UI.DataField',
+            Value : company_id
+        }
+    ]
  }
 };
