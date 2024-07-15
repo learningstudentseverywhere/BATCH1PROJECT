@@ -77,6 +77,12 @@ annotate my.Companies with @UI:{
         ID:'CompanyName',
         Label : 'Company Name Info',
         Target:'@UI.FieldGroup#CompanyNameDetailsSection'
+    },
+    {
+        $Type:'UI.ReferenceFacet',
+        ID:'CompanyBranchDetails',
+        Label:'Company Branch Details',
+        Target : 'branches/@UI.LineItem' //Go for the LineItem annotation of the branches target table
     }
  ],
  FieldGroup#CompanyBasicDetailsSection :{
@@ -97,4 +103,18 @@ annotate my.Companies with @UI:{
         }
     ]
  }
+};
+
+
+annotate my.Companies_Branches with @UI:{
+    LineItem  : [
+        {
+            $Type:'UI.DataField',
+            Value : branch_id
+        },
+        {
+            $Type:'UI.DataField',
+            Value:branch_location
+        }
+    ]
 };
