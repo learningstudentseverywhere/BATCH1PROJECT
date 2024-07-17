@@ -13,7 +13,8 @@ annotate my.Companies with {
                     ValueListProperty:'company_id'
                 },
                  {
-                    $Type:'Common.ValueListParameterDisplayOnly',
+                    $Type:'Common.ValueListParameterInOut',
+                    LocalDataProperty:company_name,
                     ValueListProperty:'company_name'
                 }
             ]
