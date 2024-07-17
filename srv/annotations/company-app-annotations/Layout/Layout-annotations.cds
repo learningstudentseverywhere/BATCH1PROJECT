@@ -18,6 +18,14 @@ annotate my.Companies with @UI:{
      {
         $Type:'UI.DataField',
         Value : company_name
+     },{
+        $Type:'UI.DataField',
+        Value:no_of_people_using_transport
+     },
+     {
+       $Type : 'UI.DataFieldForAction',
+       Action:  'my.IncreasenoofpeoplebyTen',
+       Label : 'Increase People by 10'
      }
  ],
  HeaderInfo  : {
