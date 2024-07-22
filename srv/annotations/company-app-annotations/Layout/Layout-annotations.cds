@@ -26,6 +26,11 @@ annotate my.Companies with @UI:{
        $Type : 'UI.DataFieldForAction',
        Action:  'my.IncreasenoofpeoplebyTen',
        Label : 'Increase People by 10'
+     },
+      {
+       $Type : 'UI.DataFieldForAction',
+       Action:  'companyService.IncreasenoofpeoplebyCustomValue',
+       Label : 'Increase People'
      }
  ],
  HeaderInfo  : {
