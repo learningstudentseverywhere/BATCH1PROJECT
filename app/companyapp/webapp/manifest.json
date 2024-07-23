@@ -134,6 +134,15 @@
                   "tableSettings": {
                     "type": "ResponsiveTable",
                     "enableExport": false
+                  },
+                  "actions": {
+                    "AddBranch": {
+                      "press": "com.company.companyapp.ext.controller.ListReportExt.AddBranch",
+                      "visible": true,
+                      "enabled": true,
+                      "requiresSelection": true,
+                      "text": "Add Branch"
+                    }
                   }
                 }
               }
