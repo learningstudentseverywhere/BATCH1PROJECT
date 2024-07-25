@@ -23,6 +23,10 @@ annotate my.Companies with @UI:{
         Value:no_of_people_using_transport
      },
      {
+        $Type:'UI.DataField',
+        Value:company_status
+     },
+     {
        $Type : 'UI.DataFieldForAction',
        Action:  'my.IncreasenoofpeoplebyTen',
        Label : 'Increase People by 10'

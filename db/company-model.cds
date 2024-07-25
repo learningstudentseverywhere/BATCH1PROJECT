@@ -5,6 +5,7 @@ entity Companies {
     key company_id : String;
         company_name : String;
         no_of_people_using_transport:Integer;
+        company_status:String;
         branches : Association to many Companies_Branches on branches.company_id = $self.company_id;
 
 }

@@ -12,3 +12,5 @@ using from '../srv/annotations/company-app-annotations/Labels/Labels';
 using from '../srv/annotations/company-app-annotations/ValueHelp/valuehelp-annotations';
 
 using from '../srv/annotations/company-app-annotations/Capablities/capablitites';
+
+using from '../srv/annotations/company-app-annotations/Variants/SelectionVariant';
