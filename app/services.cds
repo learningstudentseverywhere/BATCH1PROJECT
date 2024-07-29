@@ -14,3 +14,5 @@ using from '../srv/annotations/company-app-annotations/ValueHelp/valuehelp-annot
 using from '../srv/annotations/company-app-annotations/Capablities/capablitites';
 
 using from '../srv/annotations/company-app-annotations/Variants/SelectionVariant';
+
+using from './presentationvariant_companies/annotations';

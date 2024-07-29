@@ -18,7 +18,7 @@
     "@sap/cds-dk": "^7",
     "@sap/eslint-plugin-cds": "^3",
     "@sap/hdi-deploy": "4.9.5",
-    "@sap/ux-specification": "^1.120.14",
+    "@sap/ux-specification": "^1.120.15",
     "eslint": "^9",
     "rimraf": "^5.0.5"
   },
@@ -28,7 +28,8 @@
     "undeploy": "cf undeploy batch1project --delete-services --delete-service-keys --delete-service-brokers",
     "build": "rimraf resources mta_archives && mbt build --mtar archive",
     "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
-    "watch-companyapp": "cds watch --open companyapp/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-companyapp": "cds watch --open companyapp/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-presentationvariant_companies": "cds watch --open presentationvariant_companies/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
@@ -39,6 +40,7 @@
     }
   },
   "sapux": [
-    "app/companyapp"
+    "app/companyapp",
+    "app/presentationvariant_companies"
   ]
 }

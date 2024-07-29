@@ -65,6 +65,10 @@ modules:
       - comcompanycompanyapp.zip
       name: comcompanycompanyapp
       target-path: resources/
+    - artifacts:
+      - combatch1presentationvariantcompanies.zip
+      name: combatch1presentationvariantcompanies
+      target-path: resources/
 - name: comschoolappschoolapplication
   type: html5
   path: app/schoolapplication
@@ -78,6 +82,16 @@ modules:
 - name: comcompanycompanyapp
   type: html5
   path: app/companyapp
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: combatch1presentationvariantcompanies
+  type: html5
+  path: app/presentationvariant_companies
   build-parameters:
     build-result: dist
     builder: custom
