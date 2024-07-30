@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:u = "sap.ui.unified" xmlns="sap.m">
+
+<Dialog id="BranchDialog" title="Create Branch" class="sapUiResponsiveContentPadding" beforeOpen=".onBeforeOpen"
+ afterClose=".onAfterClose" >
+  <content>
+ <VBox>
+<Label text="Enter Branch Id :"></Label>
+<Input value="{branchModel>/BranchId}" />
+ </VBox>
+
+ <VBox>
+<Label text="Enter Branch Location :"></Label>
+<Input value="{branchModel>/BranchLocation}" />
+
+ </VBox>
+
+
+  </content>
+<beginButton>
+<Button id="create" text="Create" press=".onOk" type="Emphasized" enabled="true" />
+</beginButton>
+<endButton>
+<Button id="cancel" text="Cancel" press=".onCancel" />
+</endButton>
+
+
+ </Dialog>
+
+
+</core:FragmentDefinition>

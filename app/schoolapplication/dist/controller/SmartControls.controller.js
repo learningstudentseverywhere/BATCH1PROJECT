@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(o){"use strict";return o.extend("com.schoolapp.schoolapplication.controller.SmartControls",{onInit:function(){}})});
+//# sourceMappingURL=SmartControls.controller.js.map

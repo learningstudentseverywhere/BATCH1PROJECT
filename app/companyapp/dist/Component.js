@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/core/AppComponent","sap/ui/model/json/JSONModel"],function(n,a){"use strict";return n.extend("com.company.companyapp.Component",{metadata:{manifest:"json"},init:function(){n.prototype.init.apply(this,arguments);var o={BranchId:"aaaa",BranchLocation:"bbbb"};this.setModel(new a(o),"branchModel")}})});
+//# sourceMappingURL=Component.js.map
