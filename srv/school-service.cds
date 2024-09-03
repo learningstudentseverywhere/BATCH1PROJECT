@@ -8,4 +8,16 @@ service schoolService{
     entity CompleteStudentInfo as projection on my.CompleteStudentInfo;
     entity Teachers as projection on my.Teachers;
     entity kids as projection on my.kids;
+
+    //Excel Upload
+     @open
+    entity ExcelData {
+      student_id : String;
+    };
+
+    entity ExcelDataReturn {
+      student_id : String;
+    };
+     //action Upload(data : many ExcelData, whollyUpload : Boolean) returns ZCDSEBPS0012;
+     action Upload(data : many Students) returns ExcelDataReturn;
 }

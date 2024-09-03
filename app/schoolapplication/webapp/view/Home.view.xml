@@ -1,5 +1,5 @@
 <mvc:View controllerName="com.schoolapp.schoolapplication.controller.Home"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" 	xmlns:u="sap.ui.unified"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content >
@@ -15,9 +15,30 @@
         <Input id="studentOutput" class="sapUiTinyMarginBegin sapUiMediumMarginEnd sapUiMediumMarginTop" editable="false" value="{studentModel>/studentOutput}"/>
        </HBox>
 
+
+
        <Button id="navigeteToStudentInformationPage"  text="Go to Student Page with Normal Controls" press="onNavigateToStudentPage" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
 
             <Button id="navigeteToStudentInformationPageSmartControls"  text="Go to Student Page with Smart Controls" press="onNavigateToStudentPageSmartControls" class="sapUiMediumMarginBegin sapUiMediumMarginTop"/>
+
+
+            <VBox class="sapUiMediumMarginBegin">
+
+<!--
+File uploader is used for selection of Files only, sending the data will be handled by pressing the other button called upload
+Notes:  
+1)File Uploader will have default value for multiple file upload is 'False',so that we can upload only single file
+2) If we want user to enable multiple file upload, we need to give multiple=true in the fileuploader
+-->
+	<u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="ZAPIBPS0004/ExcelUpload/excel"
+			uploadComplete="handleUploadComplete"
+            />
+
+            <Button text="Upload" press="onExcelUpload"/>
+            </VBox>
         </content>
     </Page>
 </mvc:View>
